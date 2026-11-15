@@ -19,13 +19,24 @@
 <header class="site">
   <div class="wrap">
     <a class="wordmark" href="/" aria-label="1271 home"><img src="assets/1271-wordmark-evergreen.svg" alt="1271" width="54" height="24"></a>
-    <nav aria-label="Site">
+    <nav class="links" aria-label="Site">
       <a href="#what">What it does</a>
       <a href="#today">In the app today</a>
       <a href="#who">Who it's for</a>
       <a href="#start">Get started</a>
     </nav>
-    <a class="btn" href="https://app.twelveseventyone.com/">Sign in</a>
+    <a class="btn primary start-link" href="#start">Get started</a>
+    <a class="btn sign-in" href="https://app.twelveseventyone.com/">Sign in</a>
+    <div class="menu">
+      <nav id="menu" aria-label="Sections">
+        <a href="#what">What it does</a>
+        <a href="#today">In the app today</a>
+        <a href="#who">Who it's for</a>
+        <a href="#start">Get started</a>
+      </nav>
+      <a class="menu-open" id="menu-closed" href="#menu">Menu<span class="sr-only">: show the section links</span></a>
+      <a class="menu-close" href="#menu-closed">Close<span class="sr-only"> the section links</span></a>
+    </div>
   </div>
 </header>
 
@@ -40,7 +51,7 @@
           <a class="btn primary" href="#start">Start with 1271</a>
           <a class="btn" href="#what">See what it does</a>
         </div>
-        <p class="note">Works with QuickBooks Online and QuickBooks Time today. Houzz Pro is next. No change to how you keep your books.</p>
+        <p class="note">Connects to QuickBooks Online and Houzz Pro, read-only. QuickBooks Time hours come in as a file. No change to how you keep your books.</p>
       </div>
       <div class="screen" aria-label="An example 1271 screen with synthetic numbers">
         <div class="s-eyebrow">Overview · demo company · synthetic data</div>
@@ -51,7 +62,7 @@
           <div class="tile"><div class="l">Lowest point</div><div class="f neg">−$8,900</div><div class="m">Dec 11 · incomplete</div></div>
           <div class="tile"><div class="l">Signed backlog</div><div class="f">$275,000</div><div class="m">Remaining earned work</div></div>
         </div>
-        <svg viewBox="0 0 320 90" role="img" aria-label="Weekly closing cash for 13 weeks against a $30,000 reserve"><line x1="10" x2="310" y1="22" y2="22" stroke="#E5E3DB"/><line x1="10" x2="310" y1="68" y2="68" stroke="#E5E3DB"/><line x1="10" x2="310" y1="45" y2="45" stroke="#55665B" stroke-dasharray="3 3"/><polyline fill="none" stroke="#0F2D26" stroke-width="2" stroke-linejoin="round" points="10,33 35,22 60,28 85,41 110,54 135,45 160,48 185,51 210,72 235,76 260,50 285,53 310,63"/><polyline fill="none" stroke="#A2562F" stroke-width="2" points="85,41 110,54 135,45"/><polyline fill="none" stroke="#A2562F" stroke-width="2" points="185,51 210,72 235,76 260,50"/><polyline fill="none" stroke="#A2562F" stroke-width="2" points="285,53 310,63"/><circle cx="235" cy="76" r="3" fill="#A2562F" stroke="#fff"/><text x="310" y="41" text-anchor="end" font-size="9" fill="#55665B" font-family="Inter, sans-serif">Reserve $30,000</text></svg>
+        <div class="chart"><svg viewBox="0 0 320 90" role="img" aria-label="Weekly closing cash for 13 weeks against a $30,000 reserve"><line x1="10" x2="310" y1="22" y2="22" stroke="#E5E3DB"/><line x1="10" x2="310" y1="68" y2="68" stroke="#E5E3DB"/><line x1="10" x2="310" y1="45" y2="45" stroke="#55665B" stroke-dasharray="3 3"/><polyline fill="none" stroke="#0F2D26" stroke-width="2" stroke-linejoin="round" points="10,33 35,22 60,28 85,41 110,54 135,45 160,48 185,51 210,72 235,76 260,50 285,53 310,63"/><polyline fill="none" stroke="#A2562F" stroke-width="2" points="85,41 110,54 135,45"/><polyline fill="none" stroke="#A2562F" stroke-width="2" points="185,51 210,72 235,76 260,50"/><polyline fill="none" stroke="#A2562F" stroke-width="2" points="285,53 310,63"/><circle cx="235" cy="76" r="3" fill="#A2562F" stroke="#fff"/></svg><span class="reserve" aria-hidden="true">Reserve $30,000</span></div>
         <div class="caption">Below the reserve in 7 of 13 weeks. The overdue receipt and one unscheduled job decide it.</div>
       </div>
     </div>
@@ -75,17 +86,21 @@
     <div class="wrap">
       <div class="eyebrow">In the app today</div>
       <h2>Built on your books, not beside them.</h2>
-      <p class="lede" style="margin-top:14px">Everything marked Live is in the app today. Items marked Coming soon are being built now.</p>
+      <p class="lede" style="margin-top:14px">Everything marked Live is in the app today. Items marked Coming soon are on the way.</p>
       <div class="cards">
-        <div class="card"><span class="tag">Live</span><h3>Your books, as they are</h3><p>Upload the Account List and General Ledger exports from QuickBooks Online. 1271 keeps the original evidence, reconciles its results to your reports and shows every transaction behind a number.</p></div>
-        <div class="card"><span class="tag">Live</span><h3>13-week cash and 12-month forecast</h3><p>Weekly cash against your reserve, a twelve-month operating view, and committed, expected, upside and custom scenarios. Every figure carries its as-of date and says when inputs are incomplete.</p></div>
-        <div class="card"><span class="tag">Live</span><h3>Jobs and pipeline</h3><p>Signed work, remaining earned work, budgets, projected final margin, and opportunities weighted by one win probability. Converted bids are never counted twice.</p></div>
-        <div class="card"><span class="tag">Live</span><h3>Crew hours and payroll</h3><p>Import QuickBooks Time, map job codes and people, see unassigned hours and wages owed. Pay details stay restricted to the people allowed to see them.</p></div>
-        <div class="card"><span class="tag">Live</span><h3>Open Items for your team</h3><p>"Which job was this for?" goes to the person who knows, on their phone, with no financials attached. Their answer updates the forecast.</p></div>
-        <div class="card"><span class="tag">Live</span><h3>CFO Brief and Data Health</h3><p>A plain-language brief of what changed and what to review, generated from the numbers, not by an AI. Data Health lists what is missing, stale or unassigned, with the fix beside it.</p></div>
-        <div class="card"><span class="tag soon">Coming soon</span><h3>Live QuickBooks Online connection</h3><p>Read-only, approved by Intuit: your chart and ledger refresh on a schedule instead of by export. Overtime and bonuses, billing-basis revenue and work-in-progress land in the same release.</p></div>
-        <div class="card"><span class="tag soon">Coming soon</span><h3>Houzz Pro</h3><p>Leads, projects and schedules read from Houzz Pro into the same pipeline and forecast. Nothing is written back.</p></div>
-        <div class="card"><span class="tag soon">Coming soon</span><h3>Tax packet for your accountant</h3><p>Comparative P&amp;L, balance sheet and general ledger as PDF and Excel, pinned so the same download gives the same files. Every unknown is listed on the cover.</p></div>
+        <div class="card"><span class="tag">Live</span><h3>Your books, as they are</h3><p class="plain">See your QuickBooks numbers, kept up to date, without changing how you keep them.</p><p>Connect QuickBooks Online, read-only and approved by Intuit, and your chart, ledger and invoices refresh on a schedule. Or upload the Account List and General Ledger exports. 1271 keeps the original evidence, checks its results against your reports and shows every transaction behind a number.</p></div>
+        <div class="card"><span class="tag">Live</span><h3>Houzz Pro</h3><p class="plain">Your leads and jobs from Houzz Pro show up in 1271 on their own.</p><p>Leads, projects and schedules read from Houzz Pro into the same pipeline and forecast. Nothing is written back.</p></div>
+        <div class="card"><span class="tag">Live</span><h3>13-week cash and 12-month forecast</h3><p class="plain">See the cash you'll have each week for the next three months, and how the year looks.</p><p>Weekly cash against your reserve, a twelve-month operating view, and committed, expected and upside views, plus your own what-ifs. Every figure carries its as-of date and says when inputs are incomplete.</p></div>
+        <div class="card"><span class="tag">Live</span><h3>Cash floating in your jobs</h3><p class="plain">See how much of your own cash is floating each job until you bill it, and which jobs look profitable on paper but haven't brought the cash in.</p><p>Revenue counts when you invoice. Job costs wait as work in progress until they're billed, and each job shows whether billing is ahead of or behind the work.</p></div>
+        <div class="card"><span class="tag">Live</span><h3>Jobs and pipeline</h3><p class="plain">See which jobs make money, and which bids are worth counting on.</p><p>Signed work, work left on signed jobs, budgets, projected final margin, and bids counted by how likely you are to win them. Converted bids are never counted twice.</p></div>
+        <div class="card"><span class="tag">Live</span><h3>Crew hours and payroll</h3><p class="plain">See where your crew's hours went and what you still owe them.</p><p>Import QuickBooks Time, match job codes and people, and see unassigned hours, overtime, bonuses and wages owed. Pay details stay restricted to the people allowed to see them.</p></div>
+        <div class="card"><span class="tag">Live</span><h3>Open Items for your team</h3><p class="plain">Ask your crew a quick question and get the answer on their phone.</p><p>"Which job was this for?" goes to the person who knows, on their phone, with no financials attached. Their answer updates the forecast.</p></div>
+        <div class="card"><span class="tag">Live</span><h3>CFO Brief and Data Health</h3><p class="plain">A short read of what changed, and a list of what's missing.</p><p>A plain-language brief of what changed and what to review, generated from the numbers, not by an AI. Data Health lists what is missing, stale or unassigned, with the fix beside it.</p></div>
+        <div class="card"><span class="tag soon">Coming soon</span><h3>Tax packet for your accountant</h3><p class="plain">Hand your accountant one consistent set of year-end files.</p><p>Comparative P&amp;L, balance sheet and general ledger as PDF and Excel, pinned so the same download gives the same files. Every unknown is listed on the cover.</p></div>
+        <div class="card"><span class="tag soon">Coming soon</span><h3>Jobber</h3><p class="plain">Your quotes and jobs from Jobber show up in 1271 on their own.</p></div>
+        <div class="card"><span class="tag soon">Coming soon</span><h3>JobTread</h3><p class="plain">Your estimates and jobs from JobTread show up in 1271 on their own.</p></div>
+        <div class="card"><span class="tag soon">Coming soon</span><h3>Knowify</h3><p class="plain">Your contracts and jobs from Knowify show up in 1271 on their own.</p></div>
+        <div class="card"><span class="tag soon">Coming soon</span><h3>ServiceTitan</h3><p class="plain">Your estimates and jobs from ServiceTitan show up in 1271 on their own.</p></div>
       </div>
     </div>
   </section>
@@ -99,7 +114,7 @@
         <ul>
           <li>You do not need to understand journal entries, WIP or allocation policy. 1271 asks practical questions and shows its work.</li>
           <li>Your accountant and bookkeeper stay. 1271 reads your books; it never changes them.</li>
-          <li>An advisor is optional. Founder Marcus Roesler, EA, still works with a small number of owners directly.</li>
+          <li>An advisor is optional. Founder Marcus Roesler still works with a small number of owners directly.</li>
         </ul>
       </div>
       <div>
@@ -122,7 +137,7 @@
           <p style="margin-top:12px">Tell us about your company and the systems you use. Pricing is shared in that first conversation and is being set during the pilot.</p>
           <ol class="steps">
             <li>A short call about your business and what you want to decide.</li>
-            <li>You export two reports from QuickBooks Online; 1271 does the rest.</li>
+            <li>You connect QuickBooks Online, or upload two of its reports; 1271 does the rest.</li>
             <li>Your first forecast, brief and open questions.</li>
           </ol>
           <p class="muted" style="margin-top:14px">Already a customer? <a href="https://app.twelveseventyone.com/">Sign in</a>.</p>
