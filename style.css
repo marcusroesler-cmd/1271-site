@@ -130,8 +130,20 @@ section.tight { padding-block: 56px }
 .contact .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden }
 .contact .small { font-size: 13px; line-height: 24px; margin-top: 12px }
 .muted a { padding-block: 3px }
+.start p a { padding-block: 3px } /* SITE-PRICING: the Get started line's "pricing" link, a 24 px inline target like .muted a */
 .contact .small a { padding-block: 4px }
 .start { position: relative }
+
+/* pricing (pricing.html): the revenue bands (three across, then two), the five promises */
+header.site nav a[aria-current="page"] { color: var(--brand); text-decoration: underline; text-underline-offset: 4px }
+.cards.prices { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+.price.talk .figure { font-size: 32px }
+.price.talk .btn { margin-top: 14px }
+.price .amount { font-size: 15px; color: var(--ink-2); margin: 4px 0 10px }
+.price .figure { font-family: var(--f-display); font-size: 40px; line-height: 1.1; color: var(--brand); letter-spacing: -.02em; font-variant-numeric: tabular-nums; margin-right: 4px }
+ul.rules { list-style: none; padding: 0; margin-bottom: 0 }
+.rules.promises li { border-top: 2px solid var(--brand); padding-top: 12px }
+.rules.promises h3 { color: var(--brand); margin-bottom: 0 }
 
 /* footer */
 footer.site { border-top: 1px solid var(--line); padding-block: 32px 48px; font-size: 14px; color: var(--ink-3) }
@@ -154,7 +166,7 @@ footer.site a:hover { text-decoration: underline }
   section[id] { scroll-margin-top: 20px }
   .hero { padding-block: 40px 40px }
   .hero .grid, .two, .start { grid-template-columns: 1fr; gap: 28px }
-  .questions, .cards, .rules { grid-template-columns: 1fr }
+  .questions, .cards, .cards.prices, .rules { grid-template-columns: 1fr }
   .screen .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px }
   .screen .tile { padding: 8px }
   .screen .tile .f { font-size: 15px }
